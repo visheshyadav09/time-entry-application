@@ -1,0 +1,23 @@
+{% extends 'app/main.html' %} {% block content %}
+
+{% load static %}	
+				
+<div class="mt-4 container">
+	<div class="d-flex  links">
+				<a  class="btn btn-warning ml-3" href="{% url 'app:project' %}" style="color:black; font-weight:700;" >Add New Project</a>
+				<a class="btn btn-success ml-3" href="{% url 'app:task' %}" style="color:black; font-weight:700" >Add New Task</a>
+	</div>
+
+	<h3 class="mt-5">Your Tasks</h3>
+{% for task in tasks %}
+<hr>
+<div class="post-entry">
+    <h2><a href="{% url 'app:taskdetail' task.id%}">{{task.title}}</a></h2>(start time : {{task.start}}  |  end time : {{task.end}}  |  task duration : {{task.duration}})
+    <br>
+    <p>under project {{ task.project }}</p>
+</div>
+<hr>
+{% endfor %}
+</div>
+
+{% endblock %}

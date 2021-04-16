@@ -1,0 +1,16 @@
+{% extends 'app/main.html' %} {% block content %}
+
+{% load static %}
+<div class="container">
+<h1 class="mb-4">New Project</h1>
+<form action="" method="POST" >
+    {% csrf_token %}
+    
+   <div class="mb-4"> {{form.title}}</div>
+    
+   
+    <button type="submit" class="btn btn-danger" style="color:white; font-weight:700;">Save</button>
+</form>
+</div>
+
+{% endblock %}

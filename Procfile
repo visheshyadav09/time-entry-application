@@ -1,0 +1,1 @@
+web: gunicorn time_entry_application.wsgi --log-file -
