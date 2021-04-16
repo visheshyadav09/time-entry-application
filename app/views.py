@@ -104,7 +104,8 @@ def logoutUser(request):
     logout(request)
 
     return redirect('app:login')
-
+    
+@login_required(login_url='app:login')
 def taskDetail(request,id):
     task=UserTasks.objects.get(id=id)
     if request.is_ajax():
