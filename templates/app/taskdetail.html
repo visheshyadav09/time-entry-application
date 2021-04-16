@@ -1,6 +1,12 @@
 {% extends 'app/main.html' %} {% block content %}
 
 {% load static %}
+<style>
+  .countdowner{
+      display: flex;
+      justify-content: center;
+  }
+</style>
 <div class="container">
     <br>
     <h1><span style="font-weight:300">Project Name</span> : {{task.project}}</h1>
