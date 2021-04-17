@@ -94,7 +94,9 @@ def addTask(request):
             return redirect('app:home')
         else:
             messages.info(request,"Start time should be before end time")
-            return redirect('app:task')
+            form=TaskForm()
+
+            return render(request,'app/add_task.html',{'form':form,'projects':projects})
     return render(request,'app/add_task.html',{'form':form,'projects':projects})
     
 

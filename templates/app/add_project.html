@@ -12,6 +12,9 @@ input{
 </style>
 <div class="container">
 <h1 class="mb-4">New Project</h1>
+<div class="btn-actions-pane-right actions-icon-btn">
+    <a href="{% url 'app:home'%}" class="mb-2 mr-2 border-0 btn-transition btn btn-outline-warning" style="float:right; font-weight:700"> < Back</a>
+</div>
 <form action="" method="POST" >
     {% csrf_token %}
     
@@ -21,5 +24,12 @@ input{
     <button type="submit" class="btn btn-danger" style="color:white; font-weight:700;">Save</button>
 </form>
 </div>
+
+<script type = "text/javascript" >
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+
 
 {% endblock %}

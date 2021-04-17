@@ -10,6 +10,9 @@
 <div class="container">
     <br>
     <h1><span style="font-weight:300">Project Name</span> : {{task.project}}</h1>
+    <div class="btn-actions-pane-right actions-icon-btn">
+      <a href="{% url 'app:home'%}" class="mb-2 mr-2 border-0 btn-transition btn btn-outline-warning" style="float:right; font-weight:700"> < Back</a>
+  </div>
     {% if not task.timeup %}
     <button type='button' id="start_button" class="mb-2 mr-2 ml-3 mt-4 btn-transition btn btn-outline-primary"onclick="timerstart()">Start Task</button>
     {% endif %}
@@ -93,8 +96,12 @@ function (){
 
 }
 
-
 </script>
 
+<script type = "text/javascript" >
+  function preventBack() { window.history.forward(); }
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };
+</script>
 
 {% endblock %}
