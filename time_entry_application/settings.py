@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'pei^n*+3ajvx=9xg*xdb^y728p_!xiw)+^^yg@jcgrg^*@_+hu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vishesh-time-entry-app.herokuapp.com','127.0.0.1']
 
