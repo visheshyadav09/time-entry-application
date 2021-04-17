@@ -27,7 +27,7 @@ class TaskForm(ModelForm):
         widgets={
             'start': forms.TimeInput(attrs={'type': 'time','class':'form-control mb-2 mr-sm-2'}),
             'end': forms.TimeInput(attrs={'type': 'time','class':'form-control mb-2 mr-sm-2' }),
-            'title':forms.TextInput(attrs={'class':'form-control mb-2 mr-sm-2','placeholder':'Project Title'}),
+            'title':forms.TextInput(attrs={'class':'form-control mb-2 mr-sm-2','placeholder':'Task Title'}),
         }
         
     

@@ -100,9 +100,7 @@ def addTask(request):
 
 
 def logoutUser(request):
-
     logout(request)
-
     return redirect('app:login')
     
 @login_required(login_url='app:login')

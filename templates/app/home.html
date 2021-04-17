@@ -12,8 +12,12 @@
 				<a  class="btn btn-warning ml-3" href="{% url 'app:project' %}" style="color:black; font-weight:700;" >Add New Project</a>
 				<a class="btn btn-success ml-3" href="{% url 'app:task' %}" style="color:black; font-weight:700" >Add New Task</a>
 	</div>
+	{% if not tasks %}
+	<h3 class='mt-5'>You dont have any tasks</h3>
 
+	{%else%}
 	<h3 class="mt-5">Your Tasks</h3>
+	{%endif%}
 {% for task in tasks %}
 <hr>
 <div class="post-entry">
